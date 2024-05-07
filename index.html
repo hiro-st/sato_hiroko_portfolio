@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sato Hiroko's Portfolio</title>
+    <meta name="description" content="佐藤寛子のポートフォリオです。">
+
+    <!-- フォント -->
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'jqr4qwt',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
+    <!-- リセットcss -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/aos.css">
+
+    <!-- slick CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--  js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</head>
+
+<body>
+    <!-- PC左右固定バー -->
+    <div class="pc-vertical-writing-left">
+        <p>伝わるデザイン</p>
+    </div>
+
+    <div class="pc-vertical-writing-right">
+        <p>想いをカタチに</p>
+    </div>
+
+
+
+
+    <header class="header">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="ロゴ"></a>
+            </div>
+
+            <nav class="pc-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="sp-nav">
+                <ul>
+                    <li class="menu-background">Menu</li>
+                    <li><a href="#about"><img src="img/arrow.png" alt="矢印">About</a></li>
+                    <li><a href="#skills"><img src="img/arrow.png" alt="矢印">Skills</a></li>
+                    <li><a href="#works"><img src="img/arrow.png" alt="矢印">Works</a></li>
+                    <li><a href="profile.html"><img src="img/arrow.png" alt="矢印">Profile</a></li>
+                    <li class="contact-background"><a href="#contact"><img src="img/arrow.png" alt="矢印">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="to-top">
+            <p><img src="img/to-top.png" alt="トップへ戻る"></p>
+        </div>
+
+        <section class="mv">
+            <div class="mv-container">
+                <picture>
+                    <source srcset="img/mv-375.jpg" media="(max-width: 375px)">
+                    <source srcset="img/mv-767.jpg" media="(max-width: 767px)">
+                    <img src="img/mv-pc.jpg" alt="プロフィール写真">
+                </picture>
+
+                <div class="scroll">
+                    <p>Scroll</p>
+                </div>
+
+                <!-- SPサイドバー -->
+                <div class="sp-vertical-writing">
+                    <p>想いをカタチに、伝わるデザイン</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section id="about" class="about wrapper" data-aos="zoom-in-up">
+            <div class="section-title">
+                <h1>About</h1>
+            </div>
+
+            <div class="about-container">
+
+                <p><img src="img/profile-sp.jpg" alt=""></p>
+
+                <div class="about-text">
+                    <div class="name">
+                        <p>佐藤 寛子</p>
+                    </div>
+
+                    <div class="about-text-content">
+                        <p>1990年11月名古屋市出身<br>
+                            2013年3月名古屋外国語大学卒業<br>
+                            2015年5月繊維商社で営業事務として従事<br>
+                            結婚やコロナを機に仕事の方向性について悩んでいたところweb制作に出会い2023年2月から勉強を始める</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn">
+                <a href="profile.html">View Profile</a>
+            </div>
+        </section>
+
+
+
+
+
+        <section id="skills" class="skills">
+            <div class="skills-box"></div>
+
+            <div class="section-title">
+                <h1>Skills</h1>
+            </div>
+
+            <div class="wrapper">
+                <div class="skills-items">
+                    <div class="skills-item" data-aos="fade-up">
+                        <p><img src="img/skills-1.jpg" alt="パソコン"></p>
+
+                        <h2>Web design</h2>
+
+                        <div class="skills-text">
+                            <p>
+                                Webデザイン、バナーの制作ができます。コンセプトに基づいてじっくりとリサーチをし、細部にこだわって取り組みます。コーディング知識もあるので再現性の高いデザインをします。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="skills-item cording" data-aos="fade-up">
+                        <p><img src="img/skills-2.jpg" alt="パソコン"></p>
+
+                        <h2>Coding</h2>
+
+                        <div class="skills-text">
+                            <p>HTML/CSSを使用しデザインを忠実に再現しますjQueryを使用してアニメーションをつけることも可能です。誰が見ても分かりやすい記述を心がけています。</p>
+                        </div>
+                    </div>
+
+                    <div class="skills-item tools" data-aos="fade-up">
+                        <p class="skills-icon">
+                            <img src="img/Illustrator.jpg" alt="Illustrator">
+                            <img src="img/photoshop.jpg" alt="Photoshop">
+                            <img src="img/vscode.png" alt="VSCode">
+                            <img src="img/Figma-Icon.svg" alt="Figma">
+                        </p>
+
+
+                        <h2>Tools</h2>
+
+                        <div class="skills-text">
+                            <p>Illustrator・Photoshop・figma・VScodeを使用して制作を行います。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="works" class="works">
+            <div class="section-title">
+                <h1>Works</h1>
+            </div>
+
+            <div class="wrapper">
+                <div class="sub-section-title">
+                    <h2>バナー</h2>
+                </div>
+
+                <div class="works-items">
+                    <ul class="slider">
+                        <li>
+                            <a href="works1.html">
+                                <div class="overly">
+                                    <img src="img/works-1.jpg" alt="携帯料金プランバナー">
+                                    <p class="overly-text">View More</p>
+                                </div>
+                            </a>
+                            <div class="works-item-text">
+                                <p>スクール課題</p>
+                                <p>携帯料金プランバナー</p>
+                                <p>Trace</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="works2.html">
+                                <div class="overly">
+                                    <img src="img/works-2.jpg" alt="旅行会社NEWアプリバナー">
+                                    <p class="overly-text">View More</p>
+                                </div>
+                            </a>
+                            <div class="works-item-text">
+                                <p>スクール課題</p>
+                                <p>旅行会社NEWアプリバナー</p>
+                                <p>Trace</p>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <a href="works3.html">
+                                <div class="overly">
+                                    <img src="img/works-3.jpg" alt="飲食店新メニューバナー">
+                                    <p class="overly-text">View More</p>
+                                </div>
+                            </a>
+                            <div class="works-item-text">
+                                <p>スクール課題</p>
+                                <p>飲食店新メニューバナー</p>
+                                <p>Design</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="works4.html">
+                                <div class="overly">
+                                    <img src="img/works-4.jpg" alt="飲食店新メニューバナー">
+                                    <p class="overly-text">View More</p>
+                                </div>
+                            </a>
+                            <div class="works-item-text">
+                                <p>スクール課題</p>
+                                <p>飲食店新メニューバナー</p>
+                                <p>Design</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="sub-section-title">
+                    <h3>LP</h3>
+                </div>
+
+                <div class="works-items">
+                    <ul class="slider">
+                        <li>
+                            <a href="works5.html">
+                                <div class="overly">
+                                    <img src="img/works-5.jpg" alt="ワーキングスペースLP">
+                                    <p class="overly-text">View More</p>
+                                </div>
+                            </a>
+                            <div class="works-item-text">
+                                <p>スクール課題</p>
+                                <p>ワーキングスペースLP</p>
+                                <p>Trace</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="works6.html">
+                                <div class="overly">
+                                    <img src="img/works-6.jpg" alt="美容室LP">
+                                    <p class="overly-text">View More</p>
+                                </div>
+                            </a>
+                            <div class="works-item-text">
+                                <p>スクール課題</p>
+                                <p>美容室LP</p>
+                                <p>Design</p>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <a href="works7.html">
+                                <div class="overly">
+                                    <img src="img/works-7.jpg" alt="カフェLP">
+                                    <p class="overly-text">View More</p>
+                                </div>
+                            </a>
+                            <div class="works-item-text">
+                                <p>スクール課題</p>
+                                <p>カフェLP</p>
+                                <p>Coding</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <form id="contact" class="contact" method="post"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSedx5PvCA4gYh8k5NHW_FKqkJzz-a2zRetMCUOS-0lKpG5bwQ/formResponse"
+            target="hidden_iframe" onsubmit="submitted=true;">
+
+
+            <div class="wrapper">
+                <div class="section-title">
+                    <h1>Contact</h1>
+                </div>
+
+                <div class="contact-text">
+                    <p>当サイトをご覧くださりありがとうございます。<br>
+                        制作に関するご相談・お見積りのご依頼など、下記のフォームからお気軽にお問い合わせください。</p>
+                </div>
+
+                <div class="form">
+                    <label for="name">お名前<span>必須</span></label>
+                    <input class="form-box" type="text" name="entry.2130696198" id="name" placeholder="山田 花子"
+                        required />
+
+                </div>
+
+                <div class="form">
+                    <label for="name">メールアドレス<span>必須</span></label>
+                    <input class="form-box" type="text" name="entry.1240322878" id="name" placeholder="abc@def.jp"
+                        required />
+                </div>
+
+                <div class="form">
+                    <label for="contents">内容<span>必須</span></label>
+                    <textarea class="textarea" name="entry.1540748747" id="contents" cols="30" rows="10"
+                        placeholder="お問い合わせ内容が入ります。" required></textarea>
+                </div>
+
+                <div class="submit-btn">
+                    <input type="submit">
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript">
+            var submitted = false;
+        </script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+            onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright © H.Sato All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
