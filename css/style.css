@@ -1,4 +1,11 @@
 @charset "utf-8";
+
+
+.wf-loading {
+    opacity: 0;
+}
+
+
 html,
 body,
 h1,
@@ -53,7 +60,7 @@ a {
 
 .to-top {
     position: fixed;
-    z-index: 700;
+    z-index: 900;
     bottom: 30px;
     right: 25px;
     transition: 0.3s;
@@ -63,8 +70,6 @@ a {
     cursor: pointer;
     opacity: 0.7;
 }
-
-
 
 /* PC左右固定バー*/
 .pc-vertical-writing-left,
@@ -171,8 +176,9 @@ a {
         width: 60px;
         cursor: pointer;
         z-index: 999;
-        position: relative;
-        right: 50px;
+        position: fixed;
+        right: 6vw;
+        background: rgb(255, 255, 255, 0.8);
     }
 
 
@@ -224,7 +230,7 @@ a {
 
     .sp-nav a img {
         width: 5px;
-        margin: 0 20px 5px;
+        margin: 0 20px 12px;
     }
 
     .sp-nav ul {
@@ -333,22 +339,22 @@ a {
 
 
 /* 共通 */
-h1 {
+h2 {
     font-size: 30px;
     text-align: center;
     font-family: garamond-premier-pro-caption, serif;
 }
 
-h2 {
+h3 {
     font-size: 24px;
 }
 
 @media screen and (max-width:767px) {
-    h1 {
+    h2 {
         font-size: 24px;
     }
 
-    h2 {
+    h3 {
         font-size: 20px;
     }
 }
@@ -407,7 +413,7 @@ h2 {
     opacity: 1;
 }
 
-.about h1 {
+.about h2 {
     color: #df3894;
 }
 
@@ -504,7 +510,7 @@ h2 {
     margin-top: 199px;
 }
 
-.skills h2 {
+.skills h3 {
     margin: 20px 0;
     font-family: garamond-premier-pro-caption, serif;
 }
@@ -532,7 +538,7 @@ h2 {
     margin-right: 0;
 }
 
-.skills h1 {
+.skills h2 {
     color: #1e3263;
 }
 
@@ -670,7 +676,7 @@ h2 {
     margin: 20px 0;
 }
 
-.works h1 {
+.works h2 {
     color: #1e3263;
 }
 
@@ -804,7 +810,7 @@ label {
     text-align: center;
 }
 
-.works-html h1 {
+.works-html h2 {
     margin-bottom: 90px;
 }
 
@@ -975,13 +981,16 @@ details summary:hover {
     .profile>.wrapper>p {
         max-width: 100%;
     }
+
+    .profile-inner {
+        margin-left: 0;
+    }
 }
 
 
 /* background */
 .background {
     padding-top: 100px;
-    padding-left: 13.39%;
     height: 100vh;
     text-align: center;
     overflow: scroll;
@@ -990,6 +999,7 @@ details summary:hover {
     scrollbar-width: none;
     /* Firefox 対応 */
     background-image: url("..//img/background-100.jpg");
+    position: relative;
 }
 
 .background::-webkit-scrollbar {
@@ -997,13 +1007,14 @@ details summary:hover {
     /* Chrome, Safari 対応 */
 }
 
-.background h1 {
+.background h2 {
     color: #fff;
     margin-bottom: 117px;
 }
 
 .background ul {
     display: flex;
+    padding-left: 13.39%;
 }
 
 .background li {
@@ -1038,111 +1049,35 @@ details summary:hover {
     background-color: #fff;
 }
 
-
-
-
-
-/* biography */
-.biography {
-    position: relative;
-    padding-top: 100px;
-    min-height: 100dvh;
-    min-height: 100vh;
-    color: black;
+.arrow span{
+	display: inline-block;
+	/* vertical-align: middle; */
+	/* margin-left: 10px; */
+	width: 250px;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+    bottom: 100px;
+    left: 200px;
 }
 
-
-
-
-.biography__container {
-    position: relative;
-    width: 100%;
-    height: 285px;
+.arrow span:before{
+	content: "";
+	display: block;
+	width: 20px;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	right: -3px;
+}
+.arrow span:before{
+	top: -7px;
 }
 
-.biography__list {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    gap: 90px;
+.arrow span:before{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
-
-.biography__item {
-    position: relative;
-    z-index: 1;
-    width: 240px;
-}
-
-.biography__item:last-of-type {
-    margin-right: 75px;
-}
-
-
-.biography__description {
-    opacity: 1;
-    transform: translateY(15px);
-    transition: opacity 1.0s, transform 1.0s;
-    transition-timing-function: ease;
-}
-
-
-.biography__list.is-show .biography__description {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-.biography__item:first-of-type .biography__description {
-    transition-delay: 0.5s;
-}
-
-.biography__item:nth-of-type(2) .biography__description {
-    transition-delay: 0.7s;
-}
-
-
-.biography__item:nth-of-type(3) .biography__description {
-    transition-delay: 0.9s;
-}
-
-
-.biography__item:nth-of-type(4) .biography__description {
-    transition-delay: 1.1s;
-}
-
-.biography__item:last-of-type .biography__description {
-    transition-delay: 1.3s;
-}
-
-.biography__item:last-of-type .biography__dot::after {
-    width: 360px;
-}
-
-.biography__dot {
-    display: block;
-    position: relative;
-    width: 10px;
-    height: 10px;
-    margin-bottom: 44px;
-    background-color: black;
-    border-radius: 50%;
-}
-
-.biography__dot::after {
-    position: absolute;
-    content: "";
-    top: 5px;
-    left: 0;
-    z-index: -1;
-    width: 330px;
-    height: 1px;
-    background-color: black;
-}
-
-
-
-
 
 
 /* strength */
@@ -1150,7 +1085,7 @@ details summary:hover {
     padding: 120px 0 120px;
 }
 
-.strength h1 {
+.strength h2 {
     display: inline-block;
     background: rgb(30, 50, 99);
     background: linear-gradient(45deg, rgba(30, 50, 99, 1) 0%, rgba(224, 56, 149, 1) 100%);
