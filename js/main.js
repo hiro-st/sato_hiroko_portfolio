@@ -5,9 +5,6 @@ $(function () {
         $('.hamburger').toggleClass('open');
     });
 
-
-
-
     // to-top
     let pagetop = $(".to-top");
     pagetop.hide();
@@ -92,4 +89,18 @@ scrollElement.addEventListener("wheel", (e) => {
 
     e.preventDefault();
     scrollElement.scrollLeft += e.deltaY;
+});
+
+
+
+var scroll;
+var winH = $(window).height();
+var objTop = $('.obj').offset().top;//基準位置
+$(window).on('scroll', function () {
+    scroll = $(window).scrollTop();
+    if (scroll >= objTop - winH) {
+        $('.circle-1').addClass('svg-elem-1-1');
+        $('.circle-2').addClass('svg-elem-2-1');
+        $('.circle-3').addClass('svg-elem-3-1');
+    }
 });

@@ -1049,32 +1049,33 @@ details summary:hover {
     background-color: #fff;
 }
 
-.arrow span{
-	display: inline-block;
-	/* vertical-align: middle; */
-	/* margin-left: 10px; */
-	width: 250px;
-	height: 1px;
-	background-color: #fff;
-	position: absolute;
+.arrow span {
+    display: inline-block;
+    /* vertical-align: middle; */
+    /* margin-left: 10px; */
+    width: 250px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
     bottom: 100px;
-    left: 200px;
+    left: 13.39%;
 }
 
-.arrow span:before{
-	content: "";
-	display: block;
-	width: 20px;
-	height: 1px;
-	background-color: #fff;
-	position: absolute;
-	right: -3px;
-}
-.arrow span:before{
-	top: -7px;
+.arrow span:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    right: -3px;
 }
 
-.arrow span:before{
+.arrow span:before {
+    top: -7px;
+}
+
+.arrow span:before {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
