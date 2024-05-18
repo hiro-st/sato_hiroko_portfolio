@@ -993,7 +993,7 @@ details summary:hover {
     padding-top: 100px;
     height: 100vh;
     text-align: center;
-    overflow: scroll;
+    /* overflow: scroll; */
     -ms-overflow-style: none;
     /* IE, Edge 対応 */
     scrollbar-width: none;
@@ -1078,6 +1078,22 @@ details summary:hover {
 .arrow span:before {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+}
+
+.background-area{
+    overflow: hidden;
+}
+
+.scroll-area{
+    overflow: visible;
+}
+
+.scroll-area .background{
+    overflow: scroll;
+}
+
+main{
+    overflow: hidden;
 }
 
 

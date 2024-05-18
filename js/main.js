@@ -76,28 +76,54 @@ $(function () {
 
 const scrollElement = document.querySelector(".background");
 
+var wheel_flg = false;
 scrollElement.addEventListener("wheel", (e) => {
-    if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
+    if (wheel_flg) {
+        if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
 
-    const maxScrollLeft = scrollElement.scrollWidth - scrollElement.clientWidth;
+        const maxScrollLeft = scrollElement.scrollWidth - scrollElement.clientWidth;
 
-    if (
-        (scrollElement.scrollLeft <= 0 && e.deltaY < 0) ||
-        (scrollElement.scrollLeft >= maxScrollLeft && e.deltaY > 0)
-    )
-        return;
+        if (
+            (scrollElement.scrollLeft <= 0 && e.deltaY < 0) ||
+            (scrollElement.scrollLeft >= maxScrollLeft && e.deltaY > 0)
+        )
+            return;
 
-    e.preventDefault();
-    scrollElement.scrollLeft += e.deltaY;
+        e.preventDefault();
+        scrollElement.scrollLeft += e.deltaY;
+    }
 });
 
 
 
+// var scroll;
+// var winH = $(window).height();
+// var objTop = $('.obj').offset().top;//基準位置
+// $(window).on('scroll', function () {
+//     scroll = $(window).scrollTop();
+//     if (scroll >= objTop - winH) {
+//         $('.circle-1').addClass('svg-elem-1-1');
+//         $('.circle-2').addClass('svg-elem-2-1');
+//         $('.circle-3').addClass('svg-elem-3-1');
+//     }
+// });
+
 var scroll;
 var winH = $(window).height();
+console.log(winH);
 var objTop = $('.obj').offset().top;//基準位置
+var bgAreaTop = $('.background-area').offset().top;
+console.log(bgAreaTop);
+
 $(window).on('scroll', function () {
+    // console.log(winH);
     scroll = $(window).scrollTop();
+    console.log(scroll);
+    if (scroll >= bgAreaTop - 100) {
+        $('.background-area').addClass('scroll-area');
+        wheel_flg = true;
+    }
+
     if (scroll >= objTop - winH) {
         $('.circle-1').addClass('svg-elem-1-1');
         $('.circle-2').addClass('svg-elem-2-1');
